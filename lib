@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:flutter_web_view/flutter_web_view.dart';
+
+void main() => runApp(MaterialApp(
+     home: MyApp(),
+     debugShowCheckedModeBanner: false,
+     theme: ThemeData(
+      primarySwatch: Colors.purple,
+     ),
+  
+));
+
+class MyApp extends StatefulWidget{
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp>{
+  @override
+  Widget build(BuildContext context){
+    return WebviewScaffold(
+      appBar: AppBar(
+        title: Text("app name"),
+
+
+
+      ), url:"https://app name.in",
+         withJavascript: true,
+         useWideViewPort: true,
+         appCacheEnabled: true,
+         allowFileURLs: true,
+         geolocationEnabled: true,
+         withZoom: true,
+         withLocalStorage: true,
+         withLocalUrl: true,
+         
+         
+    );
+    
+
+
+  }
+}
